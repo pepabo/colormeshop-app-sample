@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+  background-color: #F0F4F7;
+ }
+
+.cmsp-app {
+  font-size: 17px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cmsp-app__inner {
+  width: 400px;
+  margin: 100px auto;
+}
+.cmsp-app__installed {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+}
+.cmsp-app__installed img {
+  display: block;
+  width: 100px;
+  margin: 0 auto 35px;
+}
+.cmsp-app__installed p {
+  color: #748b9c;
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 15px;
+}
+.cmsp-app__installed span {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.cmsp-app__installed-btn {
+  margin: 0 auto;
+  display: block;
+  padding: 15px;
+  width: 200px;
+  color: #fff;
+  background-color: #3383CB;
+  border: 1px solid #2669A5;
+  font-size: 16px;
+  border-radius: 4px;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.cmsp-app__updated {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 15px;
+  border-radius: 4px;
+  background: #32ba69;
+  color: #fff;
+  text-align: center;
+  width: 800px;
+
+}
+
+.cmsp-app__title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  line-height: 0;
+  display: table;
+}
+.cmsp-app__title-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cmsp-app__title-inner:last-child {
+  padding-left: 20px;
+}
+.cmsp-app__title img {
+  width: 40px;
+  border-radius: 4px;
+}
+.cmsp-app__desc {
+  font-size: 15px;
+  color: #748b9c;
+}
+.cmsp-app__content {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 35px;
+  border-radius: 3px;
+}
+
+.cmsp-app__setting-select {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.cmsp-app__setting-select li {
+}
+.cmsp-app__setting-select label:hover {
+ cursor: pointer;
+ opacity: 0.6;
+}
+.cmsp-app__setting-select input,
+.cmsp-app__setting-select span {
+  vertical-align: middle;
+}
+
+.cmsp-app__btn {
+  text-align: center;
+}
+.cmsp-app__btn input {
+  padding: 15px;
+  width: 200px;
+  color: #fff;
+  background-color: #3383CB;
+  border: 1px solid #2669A5;
+  font-size: 16px;
+  border-radius: 4px;
+  line-height: 2;
+  cursor: pointer;
+}
+.cmsp-app__btn input:hover {
+  cursor: pointer;
+  background-color: #28669F;
+  border: 1px solid #225684;
+}
+.cmsp-app-copyright {
+  color: #748b9c;
+  text-align: center;
+}
+.cmsp-app-copyright a {
+  color: #3383CB;
+  cursor: pointer;
+}
