@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  app:
+    container_name: colormeshop-app-sample-app
+    image: ruby:2.5.1
+    command: /bin/bash -c 'rm -rf /usr/src/app/tmp/pids/server.pid; bin/rails s -b "0.0.0.0"'
+    working_dir: /usr/src/app
+    privileged: true
+    depends_on:
+      - db
+    links:
+      - db
+    volumes:
+      - .:/usr/src/app
+    environment:
+      BUNDLE_APP_CONFIG: /usr/src/app/.bundle
+    volumes_from:
+      - data
+    ports:
+      - '8888:3000'
+  db:
+    container_name: colormeshop-app-sample-db
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes_from:
+      - data
+  data:
+    container_name: colormeshop-app-sample-data
+    image: busybox
+    volumes:
+      - /var/lib/mysql
+      - /usr/src/app/vendor
+      - /usr/src/app/.bundle

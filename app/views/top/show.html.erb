@@ -1,0 +1,64 @@
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<div class="cmsp-app">
+
+  <% if flash[:installed] %>
+    <div class="cmsp-app__installed cmsp-app__modal-js">
+      <%= image_tag("icon_disable_right_click__check.png") %>
+      <p>
+        <span>インストールが完了しました！</span>
+        カラーミーショップ管理者ページの、利用中のアプリ（アプリストア）から<br>
+        画像・テキスト盗用防止がご利用できるようになります。
+      </p>
+      <button class="cmsp-app__installed-btn cmsp-app__modal-close-js">早速設定する</button>
+    </div>
+  <% end %>
+
+  <% if flash[:updated] %>
+    <div class="cmsp-app__updated" style="display:none;">
+      設定が完了しました！
+    </div>
+  <% end %>
+
+  <div class="cmsp-app__inner">
+    <h1 class="cmsp-app__title">
+      <div class="cmsp-app__title-inner"><%= image_tag("icon_disable_right_click.png") %></div>
+      <div class="cmsp-app__title-inner">画像・テキスト 盗用防止</div>
+    </h1>
+    <p class="cmsp-app__desc">
+      ショップページ上の画像とテキストを、保存・コピーできなくする設定ができます。
+    </p>
+    <%= form_tag('/', method: :put) do %>
+      <div class="cmsp-app__content">
+        画像・テキストの盗用を
+        <ul class="cmsp-app__setting-select">
+          <li>
+            <label>
+              <%= radio_button 'script_tag', 'state', 'on', { checked: @script_has_been_registered } %>
+              <span>防止する</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <%= radio_button 'script_tag', 'state', 'off', { checked: !@script_has_been_registered }%>
+              <span>防止しない</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="cmsp-app__btn">
+        <%= submit_tag('更新する') %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="cmsp-app-copyright">
+  カラーミーショップ Copyright (C) 2018 <a href="https://pepabo.com/" target="_blank">GMOペパボ株式会社</a> All Rights Reserved.
+</div>
+
+<script type="text/javascript">
+  $(".cmsp-app__modal-close-js").on('click', function () {
+    $(".cmsp-app__modal-js").stop().fadeOut("slow");
+  });
+
+  $(".cmsp-app__updated").fadeIn(400).delay(2500).fadeOut(400);
+</script>

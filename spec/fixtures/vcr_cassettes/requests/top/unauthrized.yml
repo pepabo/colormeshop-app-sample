@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.shop-pro.jp/v1/script_tags.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - OpenAPI-Generator/1.0.0/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer test
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 14 Jun 2018 03:34:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b54f8db3-747a-4cbb-b72d-21b17cfcd459
+      X-Runtime:
+      - '0.011770'
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":401010,"message":"\u3053\u306e\u30ea\u30bd\u30fc\u30b9\u306b\u30a2\u30af\u30bb\u30b9\u3067\u304d\u307e\u305b\u3093\u3002\u6709\u52b9\u30a2\u30af\u30bb\u30b9\u30c8\u30fc\u30af\u30f3\u304c\u307f\u3064\u304b\u3089\u306a\u3044\u304b\u3001\u5fc5\u8981\u306a\u30b9\u30b3\u30fc\u30d7\u304c\u4ed8\u4e0e\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002","status":401}]}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 03:34:38 GMT
+recorded_with: VCR 4.0.0

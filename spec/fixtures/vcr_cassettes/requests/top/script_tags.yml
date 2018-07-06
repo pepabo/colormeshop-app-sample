@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.shop-pro.jp/v1/script_tags.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - OpenAPI-Generator/1.0.0/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer test
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Wed, 23 May 2018 09:53:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '229'
+      Connection:
+      - keep-alive
+      Etag:
+      - W/"0619be2103318f655509c5bcdcddd355"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Rack-Dev-Mark-Env:
+      - development
+      X-Request-Id:
+      - 8562fb45-95fc-4859-aa5e-b0d26e18440f
+      X-Runtime:
+      - '0.496555'
+    body:
+      encoding: UTF-8
+      string: '{"script_tags":[{"id":4,"account_id":"PA00000001","oauth_application_id":7,"src":"https://colorme-app-disable-right-click.shop-pro.jp/disable-right-click.js","display_scope":"shop","created_at":1527066896,"updated_at":1527066896}]}'
+    http_version: 
+  recorded_at: Wed, 23 May 2018 09:53:51 GMT
+recorded_with: VCR 4.0.0
