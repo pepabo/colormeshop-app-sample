@@ -52,7 +52,7 @@ docker-compose run --rm app bundle exec rspec -fd
 
 ### スクリプトタグAPIで登録するsrc属性を変更
 
-ngrokを起動するとターミナルにURLが表示されますので、httpsから始まるURLで[設定ファイル](/blob/master/config/settings/development.yml)を更新してください。
+ngrokを起動するとターミナルにURLが表示されますので、httpsから始まるURLで[設定ファイル](/config/settings/development.yml)を更新してください。
 
 ```diff
 script_tag:
