@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   put '/', to: 'top#update'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/js/disable-right-click.js', to: 'js#show', format: :js
+  get '/auth/failure', to: 'sessions#failure'
 end

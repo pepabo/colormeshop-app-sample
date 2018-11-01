@@ -9,6 +9,9 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  def failure
+  end
+
   def auth_hash
     request.env['omniauth.auth']
   end
