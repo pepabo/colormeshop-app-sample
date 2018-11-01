@@ -106,6 +106,10 @@
   font-size: 15px;
   color: #748b9c;
 }
+.cmsp-app__link {
+  color: #3383CB;
+}
+
 .cmsp-app__content {
   background-color: #fff;
   padding: 20px;
